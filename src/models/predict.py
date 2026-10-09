@@ -6,7 +6,11 @@ vectorizer = joblib.load("src/models/tfidf_vectorizer.pkl")
 
 
 def predict_resume_score(job_description, resume):
-    input_text = job_description + " " + resume
+    # input_text = job_description + " " + resume
+    input_text = (
+        "Job Description: " + job_description
+        + " Resume: " + resume
+    )
     input_features = vectorizer.transform([input_text])
 
     predicted_score = model.predict(input_features)[0]
