@@ -18,3 +18,8 @@ venv/
 
 # IDE
 .vscode/
+# Saved machine learning models
+*.pkl
+
+# Generated data
+data/processed/
